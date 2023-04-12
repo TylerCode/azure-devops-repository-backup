@@ -15,6 +15,7 @@ This project provides a bash script to backup all azure devops repositories of a
 
 A [PowerShell version](https://github.com/Pacman1988/BackupAzureDevopsRepos) of this script has been developped by [Pacman1988](https://github.com/Pacman1988)
 
+
 ## :fire: Bash Script
 
 ### Prerequisite 
@@ -30,6 +31,10 @@ For this backup script you'll only need to generate a PAT with read access on Co
 
 ### :computer: Launch script
 
+![version](https://img.shields.io/badge/version-1.0.1-green)
+
+[Release notes](/docsrelease-notes.md)
+
     ./backup-devops.sh -o DEVOPS_ORG_URL -p DEVOPS_PAT -d BACKUP_DIRECTORY --dryrun true --verbose true
 
     Parameters:
@@ -39,11 +44,15 @@ For this backup script you'll only need to generate a PAT with read access on Co
             The directory where to store the backup archive.
        -p | --pat: The Personnal Access Token (PAT) that you need to generate for your Azure Devops Account
        -x|--dryrun: true/false - If you want to create a dummy file instead of cloning the repositories
+       -w|--projectwiki: true/false - If you want also backup the Wiki structure of the projects
        -v|--verbose true/false - Verbose mode
 
 
 
 ## :whale: Use this in docker
+
+- Stable image version  ![version](https://img.shields.io/badge/version-1.0.0-green)
+- Based on script version: ![script](https://img.shields.io/badge/version-1.0.0-orange)
 
 If you don't want to install all those prerequisities or you want to isolate this process, you can run this task in a docker image.
 
